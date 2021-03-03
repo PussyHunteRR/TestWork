@@ -1,0 +1,12 @@
+﻿@model IEnumerable<EFDataApp.Models.Book>
+@{
+    ViewBag.Title = "Все книги";
+}
+<a asp-action="Create">Добавить книгу</a>
+<table class="table">
+    <tr><td>Имя</td><td>Автор</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Name</td><td>@item.Author</td></tr>
+    }
+</table>
